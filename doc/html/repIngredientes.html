@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ingredientes: Rep del TDA Ingredientes</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Ingredientes
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','Buscar');
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('repIngredientes.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">Rep del TDA <a class="el" href="classIngredientes.html" title="T.D.A Ingredientes. ">Ingredientes</a> </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="invIngredientes"></a>
+Ingredientes</h1>
+<pre class="fragment">Consiste en almacenar cada ingrediente en un vector dinamico de ingredientes, 
+es decir va a ser una
+</pre><p> coleccion de objetos de <a class="el" href="classIngrediente.html" title="T.D.A Ingrediente. ">Ingrediente</a> y el indice ordenado por nombre y tipo, tambien borrar, modificar y demas.</p>
+<h1><a class="anchor" id="faIngredientesMetodos"></a>
+Metodos de Ingredientes</h1>
+<p>La clase ingredientes a parte de almacenar ingredientes de todo tipo tambien calcula valores Estadisticos como la media, la desviacion tipica, el maximo y el minimo de los valores de cada uno de los campos de cada uno de ellos:</p><ul>
+<li><code>Media:</code> Sumatoria de todos los valores de un campo (Calorias, Fibra, etc.) de entre el total de elementos que hay.</li>
+<li><code>Desviacion:</code> (Sumatoria de cada (dato - la media del dato)²) / (n-1), siendo n el numero total de elementos.</li>
+<li><code>Valor</code> Maximo y Valor Minimo de un campo contreto.</li>
+</ul>
+<p>Aunque sus principales metodos son los siguientes:</p><ul>
+<li><code>Filtrar</code> ingredientes por Tipo de alimento</li>
+<li><code>Imprimir</code> todos los tipos existentes</li>
+<li><code>Buscar</code> un un ingrediente concreto por nombre</li>
+</ul>
+<p><code>Imprimir</code> un ingrediente al completo</p><ul>
+<li><code>Aniadir</code> un ingrediente por orden alfabetico</li>
+</ul>
+<h1><a class="anchor" id="faIngredientesAtrib"></a>
+Los Atributos de Ingredientes</h1>
+<ul>
+<li><code><em>datos</em>,</code> un VD de ingrediente, es decir, almacena cada uno de los alimentos</li>
+<li><code><em>indice</em>,</code> un VD de enteros que contiene los indices de cada no de los ingredientes de datos para apuntar de forma ordenada a sus tipos, y asi poder filtrar por tipo de alimento de forma comoda. Un ejemplo de su uso puede ser el propio programa test_ingredientes en el que se ponen a prueba tanto la clase <a class="el" href="classIngrediente.html" title="T.D.A Ingrediente. ">Ingrediente</a> e <a class="el" href="classIngredientes.html" title="T.D.A Ingredientes. ">Ingredientes</a> como la del Vector Dinamico(VD) : <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="ingrediente_8h.html">ingrediente.h</a>&quot;</span></div><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="ingredientes_8h.html">ingredientes.h</a>&quot;</span></div><div class="line"><span class="preprocessor">#include &lt;fstream&gt;</span></div><div class="line"><span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div><div class="line"><span class="keywordtype">void</span> MuestraParametros(){</div><div class="line">        </div><div class="line">        cout&lt;&lt;<span class="stringliteral">&quot;1.- Dime el nombre del fichero con los ingredientes&quot;</span>&lt;&lt;endl;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div><div class="line">{</div><div class="line">  <span class="keywordflow">if</span> (argc!=2){</div><div class="line">          MuestraParametros();</div><div class="line">          <span class="keywordflow">return</span> 0;</div><div class="line"> }      </div><div class="line"> <span class="comment">/******************************************************************************************/</span>   </div><div class="line"> <span class="comment">//SECTION 1: Test sobre la lectura de un ingrediente</span></div><div class="line"> <span class="comment">//Ingrediente debe tener operadores de consulta y de modificacion por cada parametros</span></div><div class="line"> <span class="comment">//ademas de sobrecarga de lectura y escritura</span></div><div class="line"> <span class="keywordtype">string</span> nf =argv[1];</div><div class="line"> ifstream f(nf);</div><div class="line"> <span class="keywordflow">if</span> (!f){</div><div class="line">    cout&lt;&lt;<span class="stringliteral">&quot;No puedo abrir &quot;</span>&lt;&lt;nf&lt;&lt;endl;</div><div class="line">    <span class="keywordflow">return</span> 0;</div><div class="line"> }</div><div class="line"> <span class="comment">//Quitamos la primera linea</span></div><div class="line"> <span class="keywordtype">string</span> linea;</div><div class="line"> getline(f,linea);</div><div class="line"></div><div class="line"> <a class="code" href="classIngrediente.html">Ingrediente</a> i;</div><div class="line"> f&gt;&gt;i;</div><div class="line"> cout&lt;&lt;<span class="stringliteral">&quot;Leido ingrediente:&quot;</span>&lt;&lt;endl;</div><div class="line"> cout&lt;&lt;<span class="stringliteral">&quot;Nombre &quot;</span> &lt;&lt;i.<a class="code" href="classIngrediente.html#a41d794ad9164f6d0a086741efc304ae0">getNombre</a>()&lt;&lt;endl;</div><div class="line"> cout&lt;&lt;<span class="stringliteral">&quot;Calorias &quot;</span>&lt;&lt;i.getCalorias()&lt;&lt;endl;</div><div class="line"> cout&lt;&lt;<span class="stringliteral">&quot;Hc &quot;</span>&lt;&lt;i.getHc()&lt;&lt;endl;</div><div class="line"> cout&lt;&lt;<span class="stringliteral">&quot;Proteinas &quot;</span>&lt;&lt;i.getProteinas()&lt;&lt;endl;</div><div class="line"> cout&lt;&lt;<span class="stringliteral">&quot;Grasas &quot;</span>&lt;&lt;i.getGrasas()&lt;&lt;endl;</div><div class="line"> cout&lt;&lt;<span class="stringliteral">&quot;Fibra &quot;</span>&lt;&lt;i.getFibra()&lt;&lt;endl;</div><div class="line"> cout&lt;&lt;<span class="stringliteral">&quot;Tipo &quot;</span>&lt;&lt;i.getTipo()&lt;&lt;endl;</div><div class="line"> cout&lt;&lt;endl&lt;&lt;<span class="stringliteral">&quot;Ahora probamos la sobrecarga de salida:\t&quot;</span>&lt;&lt;i&lt;&lt;endl;</div><div class="line"> </div><div class="line"> cout&lt;&lt;<span class="stringliteral">&quot;\n Pulsa una tecla para continuar....&quot;</span>&lt;&lt;endl;</div><div class="line"> cin.get();</div><div class="line"> <span class="comment">/******************************************************************************************/</span></div><div class="line"> <span class="comment">//SECTION 2: Test sobre el objeto Ingredientes. En primer lugar comprobamos que la sobrecarga de entrada/salida</span></div><div class="line"> <span class="comment">//esta bien. Y por lo tanto la operación de insertar</span></div><div class="line"> <span class="comment">//Ponemos el puntero del fichero al principio</span></div><div class="line"> f.seekg(0);</div><div class="line"> <a class="code" href="classIngredientes.html">Ingredientes</a> all_ingre;</div><div class="line"> cout&lt;&lt;<span class="stringliteral">&quot;Lectura de todos los ingredientes&quot;</span>&lt;&lt;endl;</div><div class="line"> f&gt;&gt;all_ingre;</div><div class="line"></div><div class="line"> <span class="comment">//Comprobamos que hemos hecho bien la lectura</span></div><div class="line"> cout&lt;&lt;<span class="stringliteral">&quot;Los ingredientes ordenados por nombre...&quot;</span>&lt;&lt;endl&lt;&lt;endl;</div><div class="line"> cout&lt;&lt;all_ingre&lt;&lt;endl;;</div><div class="line"> cout&lt;&lt;<span class="stringliteral">&quot;Pulse una tecla para continuar...&quot;</span>&lt;&lt;endl&lt;&lt;endl;</div><div class="line"> cin.<a class="code" href="classIngredientes.html#a19332d4e827bb264dc4831bc6f4e2786">get</a>();</div><div class="line"> <span class="comment">/******************************************************************************************/</span></div><div class="line"> <span class="comment">//Section 3: Sobre ingredientes comprobamos  que la indexacion por tipo funciona</span></div><div class="line">  </div><div class="line">  cout&lt;&lt;<span class="stringliteral">&quot;Imprimos por tipo &quot;</span>&lt;&lt;endl;</div><div class="line">  all_ingre.ImprimirPorTipo(cout);</div><div class="line">  </div><div class="line">  cout&lt;&lt;endl&lt;&lt;<span class="stringliteral">&quot;Pulse una tecla para continuar...&quot;</span>&lt;&lt;endl&lt;&lt;endl;</div><div class="line">  cin.get();</div><div class="line">  </div><div class="line"> <span class="comment">/******************************************************************************************/</span></div><div class="line"> <span class="comment">//SECTION 4: Sobre ingredientes comprobamos consultar por nombre, size y borrar</span></div><div class="line">  cout&lt;&lt;endl&lt;&lt;endl;</div><div class="line">  cout&lt;&lt;<span class="stringliteral">&quot;El numero de ingredientes son &quot;</span>&lt;&lt;all_ingre.size()&lt;&lt;endl;</div><div class="line">  </div><div class="line">  cout&lt;&lt;<span class="stringliteral">&quot;Dime un nombre de ingrediente:&quot;</span>;</div><div class="line">  <span class="keywordtype">string</span> n;</div><div class="line">  getline(cin,n);</div><div class="line">  <a class="code" href="classIngrediente.html">Ingrediente</a> ing=all_ingre.get(n);</div><div class="line">  <span class="keywordflow">if</span> (ing.<a class="code" href="classIngrediente.html#a41d794ad9164f6d0a086741efc304ae0">getNombre</a>()!=<span class="stringliteral">&quot;Undefined&quot;</span>){</div><div class="line">    cout&lt;&lt;<span class="stringliteral">&quot;Información del ingrediente &quot;</span>&lt;&lt;ing&lt;&lt;endl;</div><div class="line">    cout&lt;&lt;<span class="stringliteral">&quot;Pulse una tecla para continuar....&quot;</span>&lt;&lt;endl;</div><div class="line">    cin.get();</div><div class="line">    </div><div class="line">    <span class="comment">//borra por nombre del ingrediente</span></div><div class="line">    all_ingre.borrar(n);</div><div class="line">    cout&lt;&lt;<span class="stringliteral">&quot;Tras el borrado de &quot;</span>&lt;&lt;ing.<a class="code" href="classIngrediente.html#a41d794ad9164f6d0a086741efc304ae0">getNombre</a>()&lt;&lt;<span class="stringliteral">&quot; los ingredientes son:&quot;</span>&lt;&lt;endl&lt;&lt;all_ingre;</div><div class="line">    cout&lt;&lt;<span class="stringliteral">&quot;Numero de ingredientes tras el borrado son &quot;</span>&lt;&lt;all_ingre.size()&lt;&lt;endl;</div><div class="line">    cout&lt;&lt;<span class="stringliteral">&quot;Pulse una tecla para continuar ....&quot;</span>&lt;&lt;endl;</div><div class="line">    cin.get();</div><div class="line">    cout&lt;&lt;<span class="stringliteral">&quot;Ahora los vemos ordenados por tipo&quot;</span>&lt;&lt;endl;</div><div class="line">    all_ingre.ImprimirPorTipo(cout);</div><div class="line">   }</div><div class="line">   <span class="keywordflow">else</span>{</div><div class="line">           cout&lt;&lt;<span class="stringliteral">&quot;El ingrediente &quot;</span>&lt;&lt;n&lt;&lt;<span class="stringliteral">&quot; no aparece &quot;</span>&lt;&lt;endl;</div><div class="line">    </div><div class="line">   }</div><div class="line">  cout&lt;&lt;endl&lt;&lt;<span class="stringliteral">&quot;Pulse una tecla para continuar...&quot;</span>&lt;&lt;endl&lt;&lt;endl;</div><div class="line">  cin.get();</div><div class="line">  <span class="comment">/******************************************************************************************/</span></div><div class="line">  <span class="comment">//SECTION 5: Obtiene los tipos diferentes y los  ingredientes de un tipo concreto</span></div><div class="line">   vector&lt;string&gt; tipos=all_ingre.getTipos();</div><div class="line">   cout&lt;&lt;<span class="stringliteral">&quot;Los tipos de alimentos son:&quot;</span>&lt;&lt;endl;</div><div class="line">   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0;i&lt;tipos.size(); ++i){</div><div class="line">      cout&lt;&lt;tipos[i]&lt;&lt;endl;</div><div class="line">   }</div><div class="line">   cout&lt;&lt;<span class="stringliteral">&quot;Pulse una tecla para continuar &quot;</span>&lt;&lt;endl;</div><div class="line">   cin.get();</div><div class="line">  </div><div class="line">   <span class="keywordtype">string</span> tipo=<span class="stringliteral">&quot;Molusco&quot;</span>;</div><div class="line">   <a class="code" href="classIngredientes.html">Ingredientes</a> ingre_tipo=all_ingre.<a class="code" href="classIngredientes.html#a69fcecda31f7050c10c3ae2559c5f9da">getIngredientesTipo</a>(tipo);</div><div class="line">   cout&lt;&lt;<span class="stringliteral">&quot;Los ingredientes de tipo &quot;</span>&lt;&lt;tipo&lt;&lt;<span class="stringliteral">&quot; son: &quot;</span>&lt;&lt;endl&lt;&lt;ingre_tipo&lt;&lt;endl;</div><div class="line">   </div><div class="line">   <span class="comment">/******************************************************************************************/</span></div><div class="line">   <span class="comment">//SECTION 6: Probamos el iterador de ingredientes</span></div><div class="line">   cout&lt;&lt;endl&lt;&lt;<span class="stringliteral">&quot;Impresión de los datos con el iterador&quot;</span>&lt;&lt;endl;</div><div class="line">   cout&lt;&lt;endl&lt;&lt;<span class="stringliteral">&quot;Pulsa una tecla&quot;</span>&lt;&lt;endl;</div><div class="line">   cin.<a class="code" href="classIngredientes.html#a19332d4e827bb264dc4831bc6f4e2786">get</a>();</div><div class="line">   <a class="code" href="classIngredientes_1_1iterador.html">Ingredientes::iterador</a> it;</div><div class="line">   <span class="keywordflow">for</span> (it=all_ingre.begin();it!=all_ingre.end();++it){</div><div class="line">           cout&lt;&lt;*it;</div><div class="line">   }</div><div class="line">   cout&lt;&lt;<span class="stringliteral">&quot;Ahora imprimimos al contrario&quot;</span>&lt;&lt;endl;</div><div class="line">   cin.get();</div><div class="line">   it=all_ingre.end();</div><div class="line">   <span class="keywordflow">if</span>(all_ingre.begin()!=all_ingre.end()){</div><div class="line">     <span class="keywordflow">do</span>{</div><div class="line">           --it;</div><div class="line">           cout&lt;&lt;*it;</div><div class="line">         </div><div class="line">     }<span class="keywordflow">while</span>(it!=all_ingre.begin());</div><div class="line">     cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div><div class="line">   }</div><div class="line"></div><div class="line">}</div></div><!-- fragment --> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<hr>
+<small>ETS Ingeniería Informática y Telecomunicaciones. Universidad de Granada.
+</small>
